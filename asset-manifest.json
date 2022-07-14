@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/Frontend-Assessment.git/static/css/main.d1e9a58e.css",
+    "main.js": "/Frontend-Assessment.git/static/js/main.9624014b.js",
+    "index.html": "/Frontend-Assessment.git/index.html",
+    "main.d1e9a58e.css.map": "/Frontend-Assessment.git/static/css/main.d1e9a58e.css.map",
+    "main.9624014b.js.map": "/Frontend-Assessment.git/static/js/main.9624014b.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.d1e9a58e.css",
+    "static/js/main.9624014b.js"
+  ]
+}
