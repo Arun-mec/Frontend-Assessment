@@ -12,12 +12,22 @@ function Baseform() {
     const [number,setNumber] = useState('') 
     const [country,setCountry] = useState('') 
     const [countrycode,setCountrycode] = useState('')
+    const [phonecode,setPhonecode] = useState('')
     const [state,setState] = useState('') 
     const [city,setCity] = useState('') 
     const [message,setMessage] = useState('') 
     const [mailalert,setMailalert] = useState('') 
     const handlesubmit = (e)=>{
-        e.preventDefault();
+      e.preventDefault();
+      // console.log(name);
+      // console.log(email);
+      // console.log(number);
+      // console.log(country);
+      // console.log(state);
+      // console.log(city);
+      // console.log(message);
+
+        
     }
     const emailValidate = () =>{
         const email_regex = /^[a-zA-Z0-9]+@(?:[a-zA-Z0-9]+\.)+[A-Za-z]+$/
@@ -34,7 +44,8 @@ function Baseform() {
       setCountry(country);
       for (let i = 0; i < countries.length; i++) {
         if (countries[i].name === country) {
-          setCountrycode(countries[i].isoCode);  
+          setCountrycode(countries[i].isoCode); 
+          setPhonecode(countries[i].phonecode) 
     }}}
   return (
     <div className="form" >
@@ -55,14 +66,7 @@ function Baseform() {
           value={email} onChange={(e)=>{setEmail(e.target.value)}} onInput={emailValidate} required/>
         </div>
         <p className="alert">{mailalert}</p>
-        <div className="form-group">
-        <label htmlFor="number">Number</label>
-          <input type="text" 
-          className="form-control" 
-          id="number" 
-          value={number} onChange={(e)=>{setNumber(e.target.value)}}/>
-        </div>
-
+        
         <div className="form-group">
         <label htmlFor="country">Country</label>
         <select
@@ -111,6 +115,18 @@ function Baseform() {
           }
         </select>
         </div>
+        <div className="form-group">
+        <label htmlFor="number">Number</label>
+        <div>
+        <input className="numbercode" type="text" value={phonecode} />
+        <input type="text" 
+          className="number" 
+          id="number" 
+          value={number} onChange={(e)=>{setNumber(e.target.value);}} />  
+        </div>
+        
+        </div>
+
         <div className="form-group">
         <label htmlFor="message">Message</label>
           <input type="text" 
