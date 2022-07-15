@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "/Frontend-Assessment.git/static/css/main.d1e9a58e.css",
-    "main.js": "/Frontend-Assessment.git/static/js/main.9624014b.js",
-    "index.html": "/Frontend-Assessment.git/index.html",
-    "main.d1e9a58e.css.map": "/Frontend-Assessment.git/static/css/main.d1e9a58e.css.map",
-    "main.9624014b.js.map": "/Frontend-Assessment.git/static/js/main.9624014b.js.map"
+    "main.css": "/static/css/main.8a99b373.css",
+    "main.js": "/static/js/main.a8c378a4.js",
+    "index.html": "/index.html",
+    "main.8a99b373.css.map": "/static/css/main.8a99b373.css.map",
+    "main.a8c378a4.js.map": "/static/js/main.a8c378a4.js.map"
   },
   "entrypoints": [
-    "static/css/main.d1e9a58e.css",
-    "static/js/main.9624014b.js"
+    "static/css/main.8a99b373.css",
+    "static/js/main.a8c378a4.js"
   ]
 }
