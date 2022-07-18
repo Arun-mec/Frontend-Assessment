@@ -4,7 +4,7 @@ import Baseform from './components/Baseform';
 function App() {
 
   return (
-    <div className="App">
+    <div className="App" >
       <Baseform/>
     </div>
   );
