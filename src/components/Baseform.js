@@ -41,17 +41,17 @@ function Baseform() {
 
     const emailValidate = () =>{
         const email_regex = /^[a-zA-Z0-9]+@(?:[a-zA-Z0-9]+\.)+[A-Za-z]+$/
-        if (email_regex.test(email)){
-            setMailalert("");
-        }else if(!email_regex.test(email)){
-            setMailalert("Email id is not valid")
-        }   
+        if(!email_regex.test(email)){
+          setMailalert("Email id is not valid")
+        }else{
+          setMailalert("")
+        }
     }
     const numberValidate =(num)=>{
         if (isNaN(num)){
           setNumberalert("Phone number is not valid");
-        }else if (!isNaN(num) ){
-          setNumberalert("")
+        }else if (!isNaN(num)){
+          setNumberalert("");
         }
     }
 
@@ -78,7 +78,7 @@ function Baseform() {
           id="email"
           value={email} onChange={(e)=>{setEmail(e.target.value)}} onInput={emailValidate} required/>
         </div>
-        <p className="alert">{mailalert}</p>
+        {alert? <p className="alert">{mailalert}</p>:null }
 
         <div className="form-group">
         <label htmlFor="number">Number</label>
@@ -87,7 +87,7 @@ function Baseform() {
           id="number" 
           value={number} onChange={(e)=>{setNumber(e.target.value);}} onKeyDown={(e)=>{numberValidate(e.target.value)}} />  
         </div>
-        <p className="alert">{numberalert}</p>
+        {alert? <p className="alert">{numberalert}</p>:null }
 
         <div className="form-group">
         <label htmlFor="country">Country</label>
